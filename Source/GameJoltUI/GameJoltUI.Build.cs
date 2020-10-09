@@ -12,7 +12,8 @@ public class GameJoltUI : ModuleRules
 			new string[]
 			{
 				"Core",
-				"UMG"
+				"UMG",
+				"GameJoltAPI"
 			}
 			);
 			
