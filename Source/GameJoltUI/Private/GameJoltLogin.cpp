@@ -14,7 +14,10 @@ void UGameJoltLogin::NativeConstruct()
         UserTokenBox->OnTextChanged.AddDynamic(this, &UGameJoltLogin::TextChanged);
 
     if(LoginButton)
+    {
         LoginButton->OnClicked.AddDynamic(this, &UGameJoltLogin::Login);
+        LoginButton->SetIsEnabled(false);
+    }
 }
 
 void UGameJoltLogin::TextChanged(const FText& Text)
