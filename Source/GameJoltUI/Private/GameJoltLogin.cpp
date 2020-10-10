@@ -33,12 +33,12 @@ void UGameJoltLogin::Login()
     LoginNode->Activate();
 }
 
-void UGameJoltLogin::OnFailure()
+void UGameJoltLogin::OnFailure(EGJErrors Error)
 {
-
+    OnFailed.Broadcast(Error);
 }
 
 void UGameJoltLogin::OnSuccess()
 {
-
+    Success.Broadcast();
 }
